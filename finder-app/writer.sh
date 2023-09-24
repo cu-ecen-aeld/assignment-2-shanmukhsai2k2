@@ -1,11 +1,17 @@
 #!/bin/bash
 writefile=$1
 writestr=$2
-if [[ $# != 2 ]];
+if [[ $# == 2 ]];
 then
 	echo -e "Enter valid 2 arguments"
 	exit 1
 fi
+if [ -z $writestr ];
+then
+	echo "writestr should not be empty"
+	exit 1
+fi
+
 dir=`dirname $writefile`
 mkdir -p $dir
 touch $writefile
