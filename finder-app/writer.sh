@@ -1,7 +1,7 @@
 #!/bin/bash
 writefile=$1
 writestr=$2
-if [[ $# == 2 ]];
+if [[ $# < 2 ]];
 then
 	echo -e "Enter valid 2 arguments"
 	exit 1
